@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="/index.css" />
+    <title>CelebrateMe | Birthday Reminder</title>
+  </head>
+  <body>
+    <div class="overall">
+      <div>
+        <div class="mainHeader">
+          <h1>CelebrateMe Dashboard</h1>
+          <div class="subHead">
+            <p>
+              <em class="instruct">
+                Keep track of birthdays and spread joy with our convenient
+                reminder app designed for busy schedules.
+              </em>
+            </p>
+          </div>
+        </div>
+        <form id="birthdayForm" action="">
+          <label for="username" class="labelContainer inputNameFlex">
+            Username:
+            <input
+              type="text"
+              id="username"
+              name="username"
+              placeholder="Enter your Username"
+              class="inputField"
+              required
+              pattern="^[a-zA-Z0-9]+$"
+            />
+          </label>
+          <label for="email" class="labelContainer inputNameFlex">
+            Email:
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter your Email address"
+              class="inputField"
+              required
+            />
+          </label>
+          <label for="dob" class="labelContainer inputNameFlex">
+            Date of Birth:
+            <input
+              type="date"
+              id="dob"
+              name="dob"
+              placeholder="Enter your birthday"
+              class="inputField"
+              required
+              min="1900-01-01"
+              max="2024-12-31"
+            />
+          </label>
+
+          <button id="actionButton" class="actButton" type="submit">
+            Get Started
+          </button>
+        </form>
+
+        <p id="successMessage" style="display: none"></p>
+        <p id="errorMessage" style="display: none"></p>
+
+        <script
+          src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+          type="module"
+        ></script>
+
+        <script src="index.js"></script>
+      </div>
+      <dotlottie-player
+        src="https://lottie.host/9ab2adfb-b2c7-4735-8e88-ea443ee5254f/iY9IbohQss.json"
+        background="transparent"
+        class="absolute"
+        speed="0.4"
+        loop
+        autoplay
+      ></dotlottie-player>
+    </div>
+  </body>
+</html>
